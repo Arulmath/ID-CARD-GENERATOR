@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Generator</title>
+    <link rel="stylesheet" href="Generate Id Card.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="box">
+        <h1>ID Card Generator</h1>
+
+        <form id="idForm" class="form">
+
+            <label>Enter Your Name</label>
+            <input type="text" id="name" placeholder="Enter full name">
+
+            <label>Date of Birth (DD/MM/YYYY)</label>
+            <div class="dob-row">
+                <select id="day"><option>DD</option></select>
+                <select id="month"><option>MM</option></select>
+                <select id="year"><option>YYYY</option></select>
+            </div>
+
+            <label>Choose Your Role</label>
+            <select id="role">
+                <option value="">-- Select Role --</option>
+                <option>Backend Developer</option>
+                <option>Frontend Developer</option>
+                <option>Full-Stack Developer</option>
+                <option>UI/UX Designer</option>
+                <option>HR</option>
+                <option>QA Tester</option>
+                <option>Project Manager</option>
+                <option>CEO</option>
+            </select>
+
+            <label>Choose Your Photo</label>
+            <input type="file" id="photo" accept="image/*">
+
+            <div class="btn-row">
+                <button type="button" id="downloadBtn">Download</button>
+                <button type="button" id="cancelBtn" class="cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="cardPreview">
+    <div class="id-card">
+        <div class="photo-circle">
+            <img id="previewImg">
+        </div>
+        <h2 id="prevName"></h2>
+        <p id="prevRole"></p>
+        <p id="prevDOB"></p>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="Generate Id Card.js"></script>
+
+</body>
+</html>
